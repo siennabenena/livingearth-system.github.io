@@ -15,7 +15,23 @@ Nosvg: false
 
 
 {%-
-include tools-page.liquid
-data="tools.landing-page.index"
+include boxes.liquid
+heading="Explore and Analyse"
+data="tools-explore"
+cols="3"
+-%}
+
+{%-
+include boxes.liquid
+heading="Learn"
+data="tools-learn"
+cols="4"
+-%}
+
+{%-
+include boxes.liquid
+heading="For Developers"
+data="tools-developers"
+cols="3"
 -%}
 

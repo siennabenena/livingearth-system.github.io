@@ -1,5 +1,6 @@
 ---
 layout: our-projects
+published: true
 
 header: "About"
 headerTop: "Living Earth"

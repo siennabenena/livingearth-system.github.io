@@ -1,0 +1,92 @@
+/* ==========================================================================
+   GET IN TOUCH BAND
+   Appears on every page (via _layouts/default.html), above the footer.
+   Colours: Ocean Blue #00577E · Morpho Blue #0096C7 · Chalk White #FCF8F5
+   ========================================================================== */
+
+.get-in-section-main {
+  background: linear-gradient(79deg, rgba(0, 87, 126, 0.55) 8.19%, #00577E 62.71%), url("../../../assets/img/living-earth-tab.jpg"), lightgray 50% / cover no-repeat;
+  padding: 40px 90px;
+  color: #FCF8F5;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 12px;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.get-in-section-container {
+  width: 40%;
+}
+
+.get-in-section-dsc {
+  max-width: 100%;
+  margin-bottom: 24px;
+}
+
+.get-in-section-dsc h3 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  color: #FCF8F5;
+}
+
+.get-in-section-dsc p {
+  color: rgba(252, 248, 245, 0.9);
+}
+
+.get-in-section-main button {
+  width: 56%;
+  height: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: capitalize;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #FCF8F5;
+  color: #00577E;
+  transition: background-color 0.15s ease;
+}
+
+.get-in-section-main button:hover {
+  background-color: #BFE6F6;
+}
+
+@media (max-width: 991px) {
+  .get-in-section-dsc {
+    display: block;
+  }
+
+  .get-in-section-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .get-in-section-dsc {
+    max-width: 100%;
+  }
+
+  .get-in-section-main {
+    display: block;
+    padding: 40px 24px;
+  }
+
+  .get-in-section-dsc p {
+    margin-bottom: 24px;
+  }
+
+  .get-in-section-main button {
+    width: 100%;
+  }
+
+  .get-in-section-dsc h3 {
+    font-size: 26px;
+  }
+}
