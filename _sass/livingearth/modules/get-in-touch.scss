@@ -1,92 +1,67 @@
 /* ==========================================================================
-   GET IN TOUCH BAND
-   Appears on every page (via _layouts/default.html), above the footer.
-   Colours: Ocean Blue #00577E · Morpho Blue #0096C7 · Chalk White #FCF8F5
+   CONTACT BAND (formerly the single-column "Get in Touch")
+   Appears on every page via _layouts/default.html.
+   Colour: Morpho Blue #0096C7 · Chalk White #FCF8F5
    ========================================================================== */
 
-.get-in-section-main {
-  background: linear-gradient(79deg, rgba(0, 87, 126, 0.55) 8.19%, #00577E 62.71%), url("../../../assets/img/living-earth-tab.jpg"), lightgray 50% / cover no-repeat;
-  padding: 40px 90px;
-  color: #FCF8F5;
-  justify-content: space-between;
+.contact-band {
+  background: #0096C7;
+  padding: 56px 0;
+}
+
+.contact-band-row {
   display: flex;
-  align-items: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 12px;
-  font-family: 'Inter', system-ui, sans-serif;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-.get-in-section-container {
-  width: 40%;
+.contact-band-col {
+  flex: 1 1 240px;
+  min-width: 220px;
 }
 
-.get-in-section-dsc {
-  max-width: 100%;
-  margin-bottom: 24px;
-}
-
-.get-in-section-dsc h3 {
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 38px;
-  margin-bottom: 16px;
-  text-transform: uppercase;
+.contact-band-heading {
   color: #FCF8F5;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 0 14px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid rgba(252, 248, 245, 0.6);
 }
 
-.get-in-section-dsc p {
-  color: rgba(252, 248, 245, 0.9);
+.contact-band-text {
+  color: rgba(252, 248, 245, 0.92);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 18px;
 }
 
-.get-in-section-main button {
-  width: 56%;
-  height: 50px;
+.contact-band-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #FCF8F5;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
   font-size: 15px;
-  font-weight: 600;
-  text-transform: capitalize;
-  outline: none;
-  cursor: pointer;
-  border: none;
-  border-radius: 6px;
-  background-color: #FCF8F5;
-  color: #00577E;
-  transition: background-color 0.15s ease;
+  text-decoration: none;
 }
 
-.get-in-section-main button:hover {
-  background-color: #BFE6F6;
+.contact-band-link:hover {
+  text-decoration: underline;
 }
 
-@media (max-width: 991px) {
-  .get-in-section-dsc {
-    display: block;
-  }
-
-  .get-in-section-container {
-    width: 100%;
-  }
+.contact-band-arrow {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
 }
 
 @media (max-width: 767px) {
-  .get-in-section-dsc {
-    max-width: 100%;
-  }
-
-  .get-in-section-main {
-    display: block;
-    padding: 40px 24px;
-  }
-
-  .get-in-section-dsc p {
-    margin-bottom: 24px;
-  }
-
-  .get-in-section-main button {
-    width: 100%;
-  }
-
-  .get-in-section-dsc h3 {
-    font-size: 26px;
+  .contact-band-row {
+    flex-direction: column;
+    gap: 32px;
   }
 }

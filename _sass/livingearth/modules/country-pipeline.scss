@@ -1,0 +1,292 @@
+/* ==========================================================================
+   COUNTRY PIPELINE (chevron style)
+   Visually matches the home page's "How it Works" pipeline (same colours,
+   same chevron shapes, same fan-hover), but stages expand inline instead
+   of navigating away. Scoped under country-pipeline-* class names so it
+   can't collide with pipeline.scss's .pipeline-section rules once both
+   are compiled into the same global stylesheet.
+   ========================================================================== */
+
+.country-pipeline-section {
+  --cp-navy: #23567b;
+  --cp-blue: #4294c3;
+  --cp-blue-dark: #2f6f95;
+  --cp-sky: #edfaff;
+  --cp-text-soft: #5c7285;
+  padding: 40px 0;
+}
+
+.country-pipeline-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px -24px rgba(15, 35, 55, 0.35);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.country-pipeline-infra {
+  margin: 30px 36px 0;
+  padding: 9px 16px;
+  background: var(--cp-sky);
+  border: 1px solid #dcefff;
+  border-radius: 9px;
+  text-align: center;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--cp-navy);
+  text-transform: uppercase;
+}
+
+.country-pipeline-flow {
+  display: flex;
+  padding: 26px 36px 6px;
+  gap: 0;
+}
+
+.country-pipeline-stage {
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  min-width: 0;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  clip-path: polygon(0 0, 91% 0, 100% 50%, 91% 100%, 0 100%, 9% 50%);
+  margin-left: -30px;
+  transition: flex-grow 0.35s ease;
+}
+
+.country-pipeline-stage:first-child {
+  margin-left: 0;
+  clip-path: polygon(0 0, 91% 0, 100% 50%, 91% 100%, 0 100%);
+}
+
+.country-pipeline-flow:hover .country-pipeline-stage {
+  flex-grow: 0.7;
+}
+
+.country-pipeline-flow:hover .country-pipeline-stage:hover {
+  flex-grow: 1.0;
+}
+
+.country-pipeline-stage-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 12px 0 16px;
+  transition: transform 0.2s;
+}
+
+.country-pipeline-stage:hover .country-pipeline-stage-inner {
+  transform: scale(1.04);
+}
+
+.country-pipeline-num {
+  font-size: 10.5px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.06em;
+}
+
+.country-pipeline-label {
+  width: 100%;
+  max-width: 100%;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  line-height: 1.25;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.country-pipeline-icon {
+  width: 26px;
+  height: 26px;
+  opacity: 0.9;
+  margin-bottom: 2px;
+}
+
+.country-pipeline-stage:nth-child(1) { background: #bfe0f2; }
+.country-pipeline-stage:nth-child(2) { background: #9ecfe8; }
+.country-pipeline-stage:nth-child(3) { background: #7abfe0; }
+.country-pipeline-stage:nth-child(4) { background: var(--cp-blue); }
+.country-pipeline-stage:nth-child(5) { background: var(--cp-blue-dark); }
+.country-pipeline-stage:nth-child(6) { background: var(--cp-navy); }
+
+.country-pipeline-stage:nth-child(1) .country-pipeline-label,
+.country-pipeline-stage:nth-child(2) .country-pipeline-label,
+.country-pipeline-stage:nth-child(3) .country-pipeline-label {
+  color: var(--cp-navy);
+}
+
+.country-pipeline-stage:nth-child(1) .country-pipeline-num,
+.country-pipeline-stage:nth-child(2) .country-pipeline-num,
+.country-pipeline-stage:nth-child(3) .country-pipeline-num {
+  color: rgba(35, 86, 123, 0.7);
+}
+
+.country-pipeline-detail {
+  margin: 4px 36px 0;
+  padding: 14px 18px;
+  background: var(--cp-sky);
+  border-radius: 10px;
+  font-size: 13px;
+  color: var(--cp-navy);
+  min-height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.country-pipeline-detail.placeholder {
+  color: var(--cp-text-soft);
+  font-style: italic;
+}
+
+.country-pipeline-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cp-blue);
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+/* --- Expand panels (sub_items grid, reused from the rounded-card version) - */
+
+.country-pipeline-panel {
+  margin: 20px 36px 30px;
+  background: var(--cp-sky);
+  border: 1px solid #E3ECEF;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.country-pipeline-panel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.country-pipeline-item {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.country-pipeline-item-img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  display: block;
+}
+
+.country-pipeline-item-title {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--cp-navy);
+  padding: 10px 12px 2px;
+}
+
+.country-pipeline-item-sub {
+  font-size: 12px;
+  color: var(--cp-text-soft);
+  line-height: 1.4;
+  padding: 0 12px 12px;
+}
+
+/* --- Environmental Descriptors nested browser lives in the same panel
+   slot, styled by env-descriptors.scss's .env-desc-* classes already ---- */
+
+.country-pipeline-panel.env-desc-panel-outer {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 20px 36px 30px;
+}
+
+/* --- Bottom badge row (e.g. Calibration and Validation) ------------------ */
+
+.country-pipeline-extra {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0 36px 30px;
+}
+
+.country-pipeline-badge {
+  display: inline-block;
+  background: #8ea231;
+  color: #fff;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: transform 0.15s ease;
+}
+
+.country-pipeline-badge:hover {
+  transform: translateY(-2px);
+}
+
+/* --- Mobile ---------------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+  .country-pipeline-flow {
+    flex-direction: column;
+    padding: 22px 20px 6px;
+    gap: 10px;
+  }
+
+  .country-pipeline-stage {
+    clip-path: none !important;
+    margin-left: 0 !important;
+    height: auto;
+    border-radius: 12px;
+    flex-grow: 1 !important;
+  }
+
+  .country-pipeline-stage-inner {
+    flex-direction: row;
+    padding: 14px 16px;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .country-pipeline-label {
+    text-align: left;
+  }
+
+  .country-pipeline-infra,
+  .country-pipeline-detail,
+  .country-pipeline-panel,
+  .country-pipeline-panel.env-desc-panel-outer,
+  .country-pipeline-extra {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .country-pipeline-infra {
+    margin-top: 20px;
+  }
+}

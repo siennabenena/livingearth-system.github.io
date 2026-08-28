@@ -1,0 +1,25 @@
+{%- comment -%}
+COUNTRIES STRIP — "Where is Living Earth?"
+Data lives in _data/countries.yml (title, url, image).
+If a country has no image set yet, a placeholder letter badge shows instead
+so the section still works before real shape assets are ready.
+{%- endcomment -%}
+<section class="countries-strip">
+  <div class="container">
+    <h2 class="countries-strip-heading">Where is Living Earth?</h2>
+    <div class="countries-strip-row">
+      {% for c in site.data.countries %}
+        <a class="countries-strip-item" href="{{ c.url }}">
+          <span class="countries-strip-icon-wrap">
+            {% if c.image %}
+              <img src="{{ c.image }}" alt="{{ c.title }}" class="countries-strip-image">
+            {% else %}
+              <span class="countries-strip-placeholder">{{ c.title | slice: 0, 1 }}</span>
+            {% endif %}
+          </span>
+          <span class="countries-strip-label">{{ c.title }}</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

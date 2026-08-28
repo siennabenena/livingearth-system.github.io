@@ -1,64 +1,284 @@
 ---
-layout: page
+layout: directory
+permalink: /europe/wales/
 
-title: Wales
-subtitle: "Novel world-first concept that aims to capture the state and dynamics of Wales’s landscape"
-background: "#07073f"
+title: "Wales"
+eyebrow: "Countries"
+subtitle: "Novel world-first concept that aims to capture the state and dynamics of Wales's landscape"
 image: "/assets/img/heading/country.jpg"
-
-button2: "Living Land Management Wales"
-button2_url: "./monmouthshire/"
+breadcrumb:
+  - label: "Living Earth"
+    url: "/"
+  - label: "Countries"
+    url: "/global/"
+  - label: "Wales"
+    url: "/europe/wales/"
+pipeline:
+  - title: "Earth Observation Data"
+    subtitle: "Acquisition and processing to an analysis-ready format."
+    icon: ic-data
+    sub_items:
+      - title: "Openly available optical and radar"
+        subtitle: "Provides access to Landsat and Sentinel-1 and Sentinel-2 data"
+        image: "/assets/img/Future1.jpg"
+        url: "https://livingwales.aber.ac.uk/"
+        newtab: true
+      - title: "Lidar"
+        subtitle: "Airborne and spaceborne Lidar"
+        image: "/assets/img/Future2.jpg"
+        url: "#"
+      - title: "Thermal"
+        subtitle: "Thermal data"
+        image: "/assets/img/Future3.jpg"
+        url: "#"
+      - title: "Data"
+        subtitle: "A list of data sources relevant to environmental descriptors in Wales"
+        image: "/assets/img/Future5.jpg"
+        url: "#"
+      - title: "Algorithms"
+        subtitle: "Algorithms for retrieving environmental descriptors"
+        image: "/assets/img/Future6.jpg"
+        url: "#"
+      - title: "Others"
+        subtitle: "Other Earth observation datasets"
+        image: "/assets/img/Future4.jpg"
+        url: "#"
+  - title: "Environmental Descriptors"
+    subtitle: "Derived indices and variables ready for classification."
+    icon: ic-leaf
+    categories:
+      - title: "Marine"
+        image: "/assets/img/wales/marine.jpg"
+        descriptors:
+          - title: "Bathymetry"
+            image: "/assets/img/wales/bathymetry.jpg"
+            description: "Placeholder needs a real one line definition"
+          - title: "Sea Surface Temperature"
+            image: "/assets/img/wales/sea-surface-temperature.jpg"
+            description: "Placeholder needs a real one line definition"
+          - title: "Sea Surface Salinity"
+            image: "/assets/img/wales/sea-surface-salinity.jpg"
+            description: "Placeholder needs a real one line definition"
+          - title: "Net Primary Production"
+            image: "/assets/img/wales/net-primary-production.jpg"
+            description: "Placeholder needs a real one line definition"
+          - title: "pH"
+            image: "/assets/img/wales/ph.jpg"
+            description: "Placeholder needs a real one line definition"
+          - title: "Chemistry"
+            image: "/assets/img/wales/chemistry.jpg"
+            description: "Placeholder needs a real one line definition"
+          - title: "Chlorophyll"
+            image: "/assets/img/wales/chlorophyll.jpg"
+            description: "Placeholder needs a real one line definition"
+          - title: "CDOM"
+            image: "/assets/img/wales/cdom.jpg"
+            description: "Placeholder needs a real one line definition"
+          - title: "Total Suspended Matter"
+            image: "/assets/img/wales/total-suspended-matter.jpg"
+            description: "Placeholder needs a real one line definition"
+      - title: "Land and Water"
+        image: "/assets/img/wales/land-and-water.jpg"
+        subcategories:
+          - title: "Vegetation"
+            image: "/assets/img/wales/vegetation.jpg"
+            descriptors:
+              - title: "Lifeform"
+                image: "/assets/img/wales/lifeform.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Leaf type"
+                image: "/assets/img/wales/leaf-type.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Phenology"
+                image: "/assets/img/wales/phenology.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Canopy Cover"
+                image: "/assets/img/wales/canopy-cover.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Canopy Height"
+                image: "/assets/img/wales/canopy-height.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Crop Type"
+                image: "/assets/img/wales/crop-type.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Plant Species"
+                image: "/assets/img/wales/plant-species.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Woody Biomass"
+                image: "/assets/img/wales/woody-biomass.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Herbaceous Biomass"
+                image: "/assets/img/wales/herbaceous-biomass.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Foliar Chemistry"
+                image: "/assets/img/wales/foliar-chemistry.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Canopy Layers"
+                image: "/assets/img/wales/canopy-layers.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Non Photosynthetic Vegetation"
+                image: "/assets/img/wales/non-photosynthetic-vegetation.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Leaf Area Index"
+                image: "/assets/img/wales/non-photosynthetic-vegetation.jpg"
+                description: "Placeholder needs a real one line definition"
+          - title: "Snow"
+            image: "/assets/img/wales/snow.jpg"
+            descriptors:
+              - title: "Snow Cover Fraction"
+                image: "/assets/img/wales/snow-cover-fraction.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Snow Water Equivalent"
+                image: "/assets/img/wales/snow-water-equivalent.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Snow Depth"
+                image: "/assets/img/wales/snow-depth.jpg"
+                description: "Placeholder needs a real one line definition"
+          - title: "Urban"
+            image: "/assets/img/wales/urban.jpg"
+            descriptors:
+              - title: "Artificial Materials"
+                image: "/assets/img/wales/artificial-materials.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Urban Vegetation"
+                image: "/assets/img/wales/urban-vegetation.jpg"
+                description: "Placeholder needs a real one line definition"
+          - title: "Water"
+            image: "/assets/img/wales/water.jpg"
+            descriptors:
+              - title: "Water Extent"
+                image: "/assets/img/wales/water-extent.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Water Depth"
+                image: "/assets/img/wales/water-depth.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Water Turbidity"
+                image: "/assets/img/wales/water-turbidity.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Water Seasonality"
+                image: "/assets/img/wales/water-seasonality.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Cyanobacteria"
+                image: "/assets/img/wales/cyanobacteria.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Algae Biomass"
+                image: "/assets/img/wales/algae-biomass.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Macroalgae"
+                image: "/assets/img/wales/macroalgae.jpg"
+                description: "Placeholder needs a real one line definition"
+          - title: "Soil"
+            image: "/assets/img/wales/soil.jpg"
+            descriptors:
+              - title: "Soil Moisture"
+                image: "/assets/img/wales/soil-moisture.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Soil Acidity"
+                image: "/assets/img/wales/soil-acidity.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Soil Texture"
+                image: "/assets/img/wales/soil-texture.jpg"
+                description: "Placeholder needs a real one line definition"
+          - title: "Energy"
+            image: "/assets/img/wales/energy.jpg"
+            descriptors:
+              - title: "Albedo"
+                image: "/assets/img/wales/albedo.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Land Surface Temperature"
+                image: "/assets/img/wales/land-surface-temperature.jpg"
+                description: "Placeholder needs a real one line definition"
+          - title: "Terrain"
+            image: "/assets/img/wales/terrain.jpg"
+            descriptors:
+              - title: "DEM"
+                image: "/assets/img/wales/dem.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Slope"
+                image: "/assets/img/wales/slope.jpg"
+                description: "Placeholder needs a real one line definition"
+              - title: "Aspect"
+                image: "/assets/img/wales/aspect.jpg"
+                description: "Placeholder needs a real one line definition"
+      - title: "Atmosphere"
+        image: "/assets/img/wales/atmosphere.jpg"
+        descriptors:
+          - title: "Air Pollutants"
+            image: "/assets/img/wales/air-polutants.jpg"
+            description: "Placeholder needs a real one line definition"
+          - title: "Climate Variables"
+            image: "/assets/img/wales/variants.jpg"
+            description: "Placeholder needs a real one line definition"
+  - title: "Classification of Land Cover & Habitats"
+    subtitle: "Historical and near real-time classification of the landscape."
+    icon: ic-map
+    url: "https://livingearth-lccs.readthedocs.io/en/latest/index.html"
+    newtab: true
+  - title: "Evidence-Based Change"
+    subtitle: "Tracking change over time to support decision-making."
+    icon: ic-change
+  - title: "Future Landscapes"
+    subtitle: "Modelling scenarios for policy and land management."
+    icon: ic-future
+  - title: "Delivery"
+    subtitle: "Policy, economy, environment and society."
+    icon: ic-deliver
+pipeline_extra:
+  - title: "Calibration and Validation"
+    url: "https://earthtrack.aber.ac.uk/lccs/wales.html"
+    newtab: true
+tools_blocks:
+  - title: "See on Map"
+    description: "Environmental descriptors, land cover, habitats and change"
+    image: "/assets/img/tools1.jpg"
+    url: "/tools/earthtrack-app?country=Wales"
+    newtab: true
+  - title: "Get the data"
+    description: "Download or stream the data to your computer"
+    image: "/assets/img/tools2.jpg"
+    url: "/europe/wales/data/"
+  - title: "Analyse the data"
+    description: "Access the Welsh Data Cube"
+    image: "/assets/img/tools3.jpg"
+    url: "https://livingwales.aber.ac.uk/jhub/"
+    newtab: true
+  - title: "Big Data"
+    description: "Background to systems that process large datasets"
+    image: "/assets/img/tools5.jpg"
+    url: "/europe/wales/big-data/"
+future_blocks:
+  - title: "Reimagining"
+    description: "What would we like to see?"
+    image: "/assets/img/Future2.jpg"
+    url: "/future/reimagining/"
+  - title: "Harmonising"
+    description: "How can we agree?"
+    image: "/assets/img/Future2.jpg"
+    url: "/future/harmonising/"
+  - title: "Realising"
+    description: "How can we be certain?"
+    image: "/assets/img/Future3.jpg"
+    url: "/future/realising/"
+  - title: "Facilitating"
+    description: "How can we track progress?"
+    image: "/assets/img/Future4.jpg"
+    url: "/future/facilitating/"
+  - title: "Valuing"
+    description: "How can we value our futures?"
+    image: "/assets/img/Future5.jpg"
+    url: "/future/valuing/"
+  - title: "Assessing Risk"
+    description: "How can we protect our assets?"
+    image: "/assets/img/Future6.jpg"
+    url: "/future/assessing-risk/"
 ---
 
-{%-
-include tools.liquid
-heading="Past & Present Landscapes"
-subheading="From knowledge of the past, we can inform the future but we need the tools to capture how we have historically shaped the landscapes of today. Earth observation data from satellites and aircraft give us a unique insight and so we have worked to develop a series of globally-applicable tools that allow us to describe, map and monitor land covers, habitats and ecosystems."
-all="./past-present-landscapes/"
-data="europe.wales.past-present-landscapes"
--%}
+## Past & Present Landscapes
 
-{%-
-include tools.liquid
-heading="Tools"
-data="europe.wales.tools"
-cols="4"
--%}
+From knowledge of the past, we can inform the future but we need the tools to capture how we have historically shaped the landscapes of today. Earth observation data from satellites and aircraft give us a unique insight and so we have worked to develop a series of globally-applicable tools that allow us to describe, map and monitor land covers, habitats and ecosystems.
 
-{%-
-include contribute.liquid
-title="Monmouthshire Pilot"
-heading="Living Land Management Wales"
-subheading="Living Land Management Wales is a Monmouthshire-based project that is using satellite mapping, socio-economic and environmental data, and computer modelling to address the fundamental question ‘How should we use our land now and into the future?’."
-button="Find Out More" url="./monmouthshire/"
-image="/assets/img/monmouthshire-login.jpg"
--%}
+{% include country-pipeline.liquid list=page.pipeline %}
 
-{%-
-include boxes.liquid
-heading="Future Landscapes"
-data="future.wales"
--%}
+{% include info-blocks.liquid list=page.tools_blocks heading="Tools" id="tools" %}
 
-{%-
-include boxes.liquid
-heading="Themes"
-data="europe.wales.themes.all"
-only="welsh,ecosystem,biodiversity"
-more="./themes/"
--%}
-
-{%-
-include boxes.liquid
-heading="Learning and Art"
-data="europe.wales.learning-and-art"
--%}
-
-{%-
-include contribute.liquid
-title="Join Livingearth"
-heading="How to contribute"
-subheading="Living Earth is an open resource that allows individuals, groups, organisations and countries/regions to better understand how to plan the restoration of landscapes through knowledge of the past. Living Earth also provides a structure that facilitates collaboration in the planning of landscapes and realisation of goals and ambitions."
-button="Learn more" url="/contribute/"
-image="/assets/img/contribute.jpg"
--%}
+{% include info-blocks.liquid list=page.future_blocks heading="Future Landscapes" id="future-landscapes" %}

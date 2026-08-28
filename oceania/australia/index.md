@@ -1,52 +1,284 @@
 ---
-layout: page
+layout: directory
+permalink: /oceania/australia/
 
-title: Australia
-subtitle: "Novel world-first concept that captures the state and dynamics of Australia’s landscape"
+title: "Australia"
+eyebrow: "Countries"
+subtitle: "Novel world-first concept that captures the state and dynamics of Australia's landscape"
 image: "/assets/img/heading/australia.jpg"
+breadcrumb:
+  - label: "Living Earth"
+    url: "/"
+  - label: "Countries"
+    url: "/global/"
+  - label: "Australia"
+    url: "/oceania/australia/"
+pipeline:
+  - title: "Earth Observation Data"
+    subtitle: "Acquisition and processing to an analysis-ready format."
+    icon: ic-data
+    categories:
+      - title: "Baseline satellite data"
+        image: "/assets/img/australia/dea-surface-reflectance.jpg"
+        descriptors:
+          - title: "DEA Surface Reflectance"
+            description: "Baseline data from Landsat and Sentinel-2 satellites, validated, calibrated and adjusted for Australian conditions"
+            image: "/assets/img/australia/dea-surface-reflectance.jpg"
+            url: "https://www.dea.ga.gov.au/products/dea-surface-reflectance"
+            newtab: true
+          - title: "DEA Open Web Services (OWS)"
+            description: "DEA Open Web Services provide access to visualisations and data exports via WMS, WMTS and WCS"
+            image: "/assets/img/australia/dea-open-web-services.jpg"
+            url: "https://docs.dea.ga.gov.au/setup/gis/web_services.html"
+            newtab: true
+          - title: "DEA via Amazon Web Services"
+            description: "We store a range of our satellite data products on Amazon Web Services (AWS) S3 buckets."
+            image: "/assets/img/australia/dea-via-amazon-web-services.jpg"
+            url: "https://data.dea.ga.gov.au/"
+            newtab: true
+      - title: "Land and vegetation"
+        image: "/assets/img/australia/land-and-vegetation.jpg"
+      - title: "Inland water"
+        image: "/assets/img/australia/inland-water.jpg"
+      - title: "Sea, ocean and coast"
+        image: "/assets/img/australia/sea-ocean-coast.jpg"
+      - title: "Hazards"
+        image: "/assets/img/australia/hazards.jpg"
+      - title: "Interactive maps and tools"
+        image: "/assets/img/australia/interactive-map-tools.jpg"
+  - title: "Environmental Descriptors"
+    subtitle: "Derived indices and variables ready for classification."
+    icon: ic-leaf
+    categories:
+      - title: "Land"
+        image: "/assets/img/australia/land.jpg"
+        subcategories:
+          - title: "Vegetation"
+            image: "/assets/img/australia/vegetation.jpg"
+            descriptors:
+              - title: "Lifeform"
+                image: "/assets/img/australia/lifeform.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Leaf type"
+                image: "/assets/img/australia/leaf-type.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Phenology"
+                image: "/assets/img/australia/phenology.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Canopy Cover"
+                image: "/assets/img/australia/canopy-cover.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Canopy Height"
+                image: "/assets/img/australia/canopy-height.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Crop Type"
+                image: "/assets/img/australia/crop-type.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Plant Species"
+                image: "/assets/img/australia/plant-species.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Woody Biomass"
+                image: "/assets/img/australia/woody-biomass.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Herbaceous Biomass"
+                image: "/assets/img/australia/herbaceous-biomass.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Foliar Chemistry"
+                image: "/assets/img/australia/foliar-chemistry.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Canopy Layers"
+                image: "/assets/img/australia/canopy-layers.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Non Photosynthetic Vegetation"
+                image: "/assets/img/australia/non-photosynthetic-vegetation.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Leaf Area Index"
+                image: "/assets/img/australia/non-photosynthetic-vegetation.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+          - title: "Snow"
+            image: "/assets/img/australia/snow.jpg"
+            descriptors:
+              - title: "Snow Cover Fraction"
+                image: "/assets/img/australia/snow-cover-fraction.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Snow Water Equivalent"
+                image: "/assets/img/australia/snow-water-equivalent.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Snow Depth"
+                image: "/assets/img/australia/snow-depth.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+          - title: "Urban"
+            image: "/assets/img/australia/urban.jpg"
+            descriptors:
+              - title: "Artificial Materials"
+                image: "/assets/img/australia/artificial-materials.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Urban Vegetation"
+                image: "/assets/img/australia/urban-vegetation.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+          - title: "Water"
+            image: "/assets/img/australia/water.jpg"
+            descriptors:
+              - title: "Water Extent"
+                image: "/assets/img/australia/water-extent.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Water Depth"
+                image: "/assets/img/australia/water-depth.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Water Turbidity"
+                image: "/assets/img/australia/water-turbidity.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Water Seasonality"
+                image: "/assets/img/australia/water-seasonality.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Cyanobacteria"
+                image: "/assets/img/australia/cyanobacteria.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Algae Biomass"
+                image: "/assets/img/australia/algae-biomass.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Macroalgae"
+                image: "/assets/img/australia/macroalgae.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+          - title: "Soil"
+            image: "/assets/img/australia/soil.jpg"
+            descriptors:
+              - title: "Soil Moisture"
+                image: "/assets/img/australia/soil-moisture.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Soil Acidity"
+                image: "/assets/img/australia/soil-acidity.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Soil Texture"
+                image: "/assets/img/australia/soil-texture.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+          - title: "Energy"
+            image: "/assets/img/australia/energy.jpg"
+            descriptors:
+              - title: "Albedo"
+                image: "/assets/img/australia/albedo.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Land Surface Temperature"
+                image: "/assets/img/australia/land-surface-temperature.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+          - title: "Terrain"
+            image: "/assets/img/australia/terrain.jpg"
+            descriptors:
+              - title: "DEM"
+                image: "/assets/img/australia/dem.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Slope"
+                image: "/assets/img/australia/slope.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+              - title: "Aspect"
+                image: "/assets/img/australia/aspect.jpg"
+                description: "Duplicated from Wales — needs Australia-specific confirmation"
+      - title: "Marine"
+        image: "/assets/img/australia/marine.jpg"
+        descriptors:
+          - title: "Bathymetry"
+            image: "/assets/img/australia/bathymetry.jpg"
+            description: "Duplicated from Wales — needs Australia-specific confirmation"
+          - title: "Sea Surface Temperature"
+            image: "/assets/img/australia/sea-surface-temperature.jpg"
+            description: "Duplicated from Wales — needs Australia-specific confirmation"
+          - title: "Sea Surface Salinity"
+            image: "/assets/img/australia/sea-surface-salinity.jpg"
+            description: "Duplicated from Wales — needs Australia-specific confirmation"
+          - title: "Net Primary Production"
+            image: "/assets/img/australia/net-primary-production.jpg"
+            description: "Duplicated from Wales — needs Australia-specific confirmation"
+          - title: "pH"
+            image: "/assets/img/australia/ph.jpg"
+            description: "Duplicated from Wales — needs Australia-specific confirmation"
+          - title: "Chemistry"
+            image: "/assets/img/australia/chemistry.jpg"
+            description: "Duplicated from Wales — needs Australia-specific confirmation"
+          - title: "Chlorophyll"
+            image: "/assets/img/australia/chlorophyll.jpg"
+            description: "Duplicated from Wales — needs Australia-specific confirmation"
+          - title: "CDOM"
+            image: "/assets/img/australia/cdom.jpg"
+            description: "Duplicated from Wales — needs Australia-specific confirmation"
+          - title: "Total Suspended Matter"
+            image: "/assets/img/australia/total-suspended-matter.jpg"
+            description: "Duplicated from Wales — needs Australia-specific confirmation"
+      - title: "Atmosphere"
+        image: "/assets/img/australia/atmosphere.jpg"
+        descriptors:
+          - title: "Air Pollutants"
+            image: "/assets/img/australia/air-pollutants.jpg"
+            description: "Duplicated from Wales — needs Australia-specific confirmation"
+          - title: "Climate Variables"
+            image: "/assets/img/australia/climate-variables.jpg"
+            description: "Duplicated from Wales — needs Australia-specific confirmation"
+  - title: "Classification of Land Cover & Habitats"
+    subtitle: "Historical and near real-time classification of the landscape."
+    icon: ic-map
+    url: "https://livingearth-lccs.readthedocs.io/en/latest/index.html"
+    newtab: true
+  - title: "Evidence-Based Change"
+    subtitle: "Tracking change over time to support decision-making."
+    icon: ic-change
+  - title: "Future Landscapes"
+    subtitle: "Modelling scenarios for policy and land management."
+    icon: ic-future
+  - title: "Delivery"
+    subtitle: "Policy, economy, environment and society."
+    icon: ic-deliver
+pipeline_extra:
+  - title: "Calibration and Validation"
+    url: "https://earthtrack.aber.ac.uk/lccs/world.html"
+    newtab: true
+tools_blocks:
+  - title: "See on Map"
+    description: ""
+    image: "/assets/img/tools1.jpg"
+    url: "/tools/earthtrack-app?country=Australia"
+    newtab: true
+  - title: "Get the data"
+    description: ""
+    image: "/assets/img/tools2.jpg"
+    url: "https://cmi.ga.gov.au/data-products/dea/607/dea-land-cover-landsat#access"
+    newtab: true
+  - title: "Analyze your options"
+    description: ""
+    image: "/assets/img/tools3.jpg"
+    url: "https://docs.dea.ga.gov.au/notebooks/DEA_datasets/DEA_Land_Cover.html"
+    newtab: true
+future_blocks:
+  - title: "Reimagining"
+    description: "What would we like to see?"
+    image: "/assets/img/Future2.jpg"
+    url: "/future/reimagining/"
+  - title: "Harmonising"
+    description: "How can we agree?"
+    image: "/assets/img/Future2.jpg"
+    url: "/future/harmonising/"
+  - title: "Realising"
+    description: "How can we be certain?"
+    image: "/assets/img/Future3.jpg"
+    url: "/future/realising/"
+  - title: "Facilitating"
+    description: "How can we track progress?"
+    image: "/assets/img/Future4.jpg"
+    url: "/future/facilitating/"
+  - title: "Valuing"
+    description: "How can we value our futures?"
+    image: "/assets/img/Future5.jpg"
+    url: "/future/valuing/"
+  - title: "Assessing Risk"
+    description: "How can we protect our assets?"
+    image: "/assets/img/Future6.jpg"
+    url: "/future/assessing-risk/"
 ---
 
-{%-
-include tools.liquid
-heading="Past & Present Landscapes"
-subheading="From knowledge of the past, we can inform the future but we need the tools to capture how we have historically shaped the Australian landscape of today. Earth observation data from satellites and aircraft give us a unique insight and so we have worked to develop a series of globally-applicable tools that allow us to describe, map and monitor land covers, habitats and ecosystems."
-all="./past-present-landscapes/"
-data="oceania.australia.past-present-landscapes"
--%}
+## Past & Present Landscapes
 
-{%-
-include tools.liquid
-heading="Tools"
-data="oceania.australia.tools"
-cols="3"
--%}
+From knowledge of the past, we can inform the future but we need the tools to capture how we have historically shaped the Australian landscape of today. Earth observation data from satellites and aircraft give us a unique insight and so we have worked to develop a series of globally-applicable tools that allow us to describe, map and monitor land covers, habitats and ecosystems.
 
-{%-
-include boxes.liquid
-heading="Future Landscapes"
-data="future.index"
--%}
+{% include country-pipeline.liquid list=page.pipeline %}
 
-{%-
-include boxes.liquid
-heading="Themes"
-data="oceania.australia.themes.all"
-only="australian,ecosystem,biodiversity"
-more="./themes/"
--%}
+{% include info-blocks.liquid list=page.tools_blocks heading="Tools" id="tools" %}
 
-{%-
-include boxes.liquid
-heading="Learning and Art"
-data="oceania.australia.learning-and-art"
--%}
-
-{%-
-include contribute.liquid
-title="Join Livingearth"
-heading="How to contribute"
-subheading="Living Earth is an open resource that allows individuals, groups, organisations and countries/regions to better understand how to plan the restoration of landscapes through knowledge of the past. Living Earth also provides a structure that facilitates collaboration in the planning of landscapes and realisation of goals and ambitions."
-button="Learn more" url="/contribute/"
-image="/assets/img/contribute.jpg"
-
--%}
+{% include info-blocks.liquid list=page.future_blocks heading="Future Landscapes" id="future-landscapes" %}

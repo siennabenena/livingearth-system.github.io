@@ -1,0 +1,24 @@
+- icon: ic-data
+  label: "Earth Observation Data"
+  detail: "Acquisition and processing to an analysis-ready format."
+  url:
+- icon: ic-leaf
+  label: "Environmental Descriptors"
+  detail: "Derived indices and variables ready for classification."
+  url: /env-des/
+- icon: ic-map
+  label: "Classification of Land Cover & Habitats"
+  detail: "Historical and near real-time classification of the landscape."
+  url: /themes/landhabcover/
+- icon: ic-change
+  label: "Evidence-Based Change"
+  detail: "Tracking change over time to support decision-making."
+  url: /themes/change/
+- icon: ic-future
+  label: "Future Landscapes"
+  detail: "Modelling scenarios for policy and land management."
+  url: /themes/futures/
+- icon: ic-deliver
+  label: "Delivery"
+  detail: "Policy, economy, environment and society."
+  url:

@@ -1,0 +1,31 @@
+{%- comment -%}
+QUICK LINKS — universal, icon-image link band.
+Include this once from _layouts/default.html so it appears on every page.
+
+Data source (in priority order):
+  1. page.quicklinks       — set this in a page's front matter to override
+                              the default set just for that page.
+  2. site.data.quicklinks  — the site-wide default (see _data/quicklinks.yml).
+
+To hide this section entirely on a specific page, set `noquicklinks: true`
+in that page's front matter.
+
+Each entry needs: title, url, icon
+  - icon is now a FILENAME (with extension) of an image you've placed in
+    /assets/img/quicklinks/  — e.g. icon: globe.png  or  icon: chicken.svg
+{%- endcomment -%}
+{% assign qlinks = page.quicklinks | default: site.data.quicklinks %}
+{%- if qlinks and page.noquicklinks != true -%}
+<section class="quick-links">
+  <div class="container">
+    <div class="quick-links-row">
+      {% for link in qlinks %}
+        <a class="quick-links-item" href="{{ link.url }}">
+          <img class="quick-links-icon" src="{{ '/assets/img/quicklinks/' | append: link.icon | relative_url }}" alt="" loading="lazy">
+          <span class="quick-links-label">{{ link.title }}</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{%- endif -%}
