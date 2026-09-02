@@ -49,8 +49,6 @@ available-link-data:
         access_link: "https://livingwales.aber.ac.uk/jhub"
       - country_region: "Switzerland"
         access_link: "https://www.swissdatacube.org/index.php/platform/"
-      - country_region: "Southeast Asia"
-        access_link: ""
 
   - title: "How do I get access to the ground observation records submitted to Earthtrack?"
     description: "Earthtrack data are available for viewing on the Earthtrack mobile application MAP page (LINK TO: EARTHTRACK] immediately following submission.

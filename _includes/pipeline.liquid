@@ -1,46 +1,69 @@
 {%- comment -%}
-PIPELINE — "BASIS OF LIVING EARTH" interactive stage diagram.
-Hover a stage to see its description; click to go to that section of the site.
-Data lives in _data/pipeline.yml (icon keyword, label, detail, url).
-A stage left with a blank url just shows its detail on click instead of navigating.
+PIPELINE — "HOW IT WORKS" / "Taking Earth Observation to Users" (Global page).
+Simple version: hover a stage for a quick line of detail text, click for the
+same text plus an optional Explore link. No nested drill-down here — that
+lives on the country pages instead.
+Data lives in _data/pipeline.yml (icon, label, detail, url per stage).
 {%- endcomment -%}
 <section class="pipeline-section">
   <div class="container">
-    <div class="pipeline-card">
-      <div class="pipeline-head">
-        <span class="pipeline-eyebrow">BASIS OF LIVING EARTH</span>
+
+    <div class="pipeline-header-row">
+      <div class="pipeline-logo">
+        <img src="/assets/img/logos/living-earth-logo.svg" alt="Living Earth" class="pipeline-logo-img">
+      </div>
+      <div class="pipeline-header-text">
+        <span class="pipeline-eyebrow">How It Works</span>
         <h2 class="pipeline-title">Taking Earth Observation to Users</h2>
       </div>
+    </div>
 
+    <div class="pipeline-card">
       <div class="pipeline-infra">Digital infrastructure (based on the Open Data Cube)</div>
 
       <div class="pipeline-flow">
         {% for stage in site.data.pipeline %}
-          <a class="pipeline-stage"
-             href="{{ stage.url | default: '#' }}"
-             data-label="{{ stage.label | escape }}"
-             data-detail="{{ stage.detail | escape }}"
-             {% unless stage.url %}data-nolink="true"{% endunless %}>
+          <button class="pipeline-stage" type="button" data-stage="{{ forloop.index0 }}"
+                  data-label="{{ stage.label | escape }}" data-detail="{{ stage.detail | escape }}">
             <span class="pipeline-stage-inner">
               <svg class="pipeline-icon" viewBox="0 0 24 24"><use href="#{{ stage.icon }}"/></svg>
               <span class="pipeline-num">{% if forloop.index < 10 %}0{{ forloop.index }}{% else %}{{ forloop.index }}{% endif %}</span>
               <span class="pipeline-label">{{ stage.label }}</span>
             </span>
-          </a>
+          </button>
         {% endfor %}
       </div>
 
-      <div class="pipeline-detail placeholder" id="pipelineDetail">Hover a stage above to see what happens at that step, CLICK to go there.</div>
+      {% for stage in site.data.pipeline %}
+        <div class="pipeline-panel" data-panel="{{ forloop.index0 }}" hidden>
+          <p class="pipeline-panel-detail">{{ stage.detail }}</p>
+          {% if stage.url %}
+            <a class="pipeline-panel-link" href="{{ stage.url }}">Explore {{ stage.label }} &rarr;</a>
+          {% endif %}
+          <div class="pipeline-panel-countries">
+            <span class="pipeline-panel-countries-label">See country specifics:</span>
+            {% for country in site.data.countries %}
+              {% unless country.title == "Global" %}
+                <a class="pipeline-panel-country" href="{{ country.url }}">
+                  <img src="{{ country.image | relative_url }}" alt="{{ country.title }}" class="pipeline-panel-country-img">
+                  <span class="pipeline-panel-country-label">{{ country.title }}</span>
+                </a>
+              {% endunless %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
 
-      <div class="pipeline-calib">
-        <div class="pipeline-calib-strip"><span></span><span></span><span></span><span></span></div>
-        <span class="pipeline-calib-label">Calibration and Validation</span>
-      </div>
-
-      <div class="pipeline-engage">
-        Engagement <span> e.g. academia, governments, research and space agencies, NGOs, landholders</span>
+      <div class="pipeline-footer-boxes">
+        <a class="pipeline-footer-box" href="https://livingearthhub.org/tools/earthtrack-app">
+          Calibration and Validation
+        </a>
+        <div class="pipeline-footer-box pipeline-footer-box-static">
+          Engagement and Outreach
+        </div>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -58,19 +81,21 @@ A stage left with a blank url just shows its detail on click instead of navigati
 <script>
   (function () {
     var stages = document.querySelectorAll('.pipeline-stage');
-    var detailBox = document.getElementById('pipelineDetail');
+    var panels = document.querySelectorAll('.pipeline-panel');
 
-    stages.forEach(function (el) {
-      var show = function () {
-        detailBox.classList.remove('placeholder');
-        detailBox.innerHTML = '<span class="pipeline-dot"></span><strong>' + el.dataset.label + ':</strong>&nbsp;' + el.dataset.detail;
-      };
-      el.addEventListener('mouseenter', show);
-      el.addEventListener('focus', show);
-      el.addEventListener('click', function (e) {
-        if (el.dataset.nolink === 'true') {
-          e.preventDefault();
-          show();
+    stages.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var id = btn.getAttribute('data-stage');
+        var panel = document.querySelector('.pipeline-panel[data-panel="' + id + '"]');
+        var isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+        stages.forEach(function (b) { b.setAttribute('aria-expanded', 'false'); b.classList.remove('is-active'); });
+        panels.forEach(function (p) { p.hidden = true; });
+
+        if (!isOpen) {
+          btn.setAttribute('aria-expanded', 'true');
+          btn.classList.add('is-active');
+          if (panel) { panel.hidden = false; }
         }
       });
     });

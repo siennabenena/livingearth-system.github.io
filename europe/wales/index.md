@@ -9,10 +9,9 @@ image: "/assets/img/heading/country.jpg"
 breadcrumb:
   - label: "Living Earth"
     url: "/"
-  - label: "Countries"
-    url: "/global/"
   - label: "Wales"
     url: "/europe/wales/"
+pipeline_validation_url: "https://livingearthhub.org/tools/earthtrack-app?country=Wales"
 pipeline:
   - title: "Earth Observation Data"
     subtitle: "Acquisition and processing to an analysis-ready format."
@@ -220,13 +219,35 @@ pipeline:
   - title: "Future Landscapes"
     subtitle: "Modelling scenarios for policy and land management."
     icon: ic-future
+    sub_items:
+      - title: "Reimagining"
+        subtitle: "What would we like to see?"
+        image: "/assets/img/Future2.jpg"
+        url: "#"
+      - title: "Harmonising"
+        subtitle: "How can we agree?"
+        image: "/assets/img/Future2.jpg"
+        url: "#"
+      - title: "Realising"
+        subtitle: "How can we be certain?"
+        image: "/assets/img/Future3.jpg"
+        url: "#"
+      - title: "Facilitating"
+        subtitle: "How can we track progress?"
+        image: "/assets/img/Future4.jpg"
+        url: "#"
+      - title: "Valuing"
+        subtitle: "How can we value our futures?"
+        image: "/assets/img/Future5.jpg"
+        url: "#"
+      - title: "Assessing Risk"
+        subtitle: "How can we protect our assets?"
+        image: "/assets/img/Future6.jpg"
+        url: "#"
   - title: "Delivery"
     subtitle: "Policy, economy, environment and society."
     icon: ic-deliver
-pipeline_extra:
-  - title: "Calibration and Validation"
-    url: "https://earthtrack.aber.ac.uk/lccs/wales.html"
-    newtab: true
+    url: "https://insights.livingwales.space/"
 tools_blocks:
   - title: "See on Map"
     description: "Environmental descriptors, land cover, habitats and change"
@@ -250,27 +271,27 @@ future_blocks:
   - title: "Reimagining"
     description: "What would we like to see?"
     image: "/assets/img/Future2.jpg"
-    url: "/future/reimagining/"
+    url:
   - title: "Harmonising"
     description: "How can we agree?"
     image: "/assets/img/Future2.jpg"
-    url: "/future/harmonising/"
+    url:
   - title: "Realising"
     description: "How can we be certain?"
     image: "/assets/img/Future3.jpg"
-    url: "/future/realising/"
+    url:
   - title: "Facilitating"
     description: "How can we track progress?"
     image: "/assets/img/Future4.jpg"
-    url: "/future/facilitating/"
+    url:
   - title: "Valuing"
     description: "How can we value our futures?"
     image: "/assets/img/Future5.jpg"
-    url: "/future/valuing/"
+    url:
   - title: "Assessing Risk"
     description: "How can we protect our assets?"
     image: "/assets/img/Future6.jpg"
-    url: "/future/assessing-risk/"
+    url:
 ---
 
 ## Past & Present Landscapes

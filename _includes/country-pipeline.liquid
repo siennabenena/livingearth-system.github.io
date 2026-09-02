@@ -14,9 +14,9 @@ Each stage needs: title, subtitle, icon, and OPTIONALLY one of:
                  EITHER descriptors (flat list) OR subcategories (list of
                  { title, image, descriptors: [...] }).
                  Each individual descriptor item takes: title, image,
-                 description, and OPTIONALLY url + newtab — if url is set
-                 (and isn't "#"), the whole card becomes a link; otherwise
-                 it's a plain informational card.
+                 and OPTIONALLY url + newtab — if url is set (and isn't
+                 "#"), the whole card becomes a link; otherwise it's a
+                 plain informational card.
 
 page.pipeline_extra can hold a single badge row below (e.g. Calibration
 and Validation) with { title, url, newtab }.
@@ -32,29 +32,16 @@ and Validation) with { title, url, newtab }.
       <div class="country-pipeline-flow">
         {% for stage in stages %}
           {% assign stage_index = forloop.index0 %}
-          {% if stage.sub_items or stage.categories %}
-            <button class="country-pipeline-stage" type="button" data-stage="{{ stage_index }}"
-                    data-title="{{ stage.title | escape }}" data-subtitle="{{ stage.subtitle | escape }}">
-              <span class="country-pipeline-stage-inner">
-                <svg class="country-pipeline-icon" viewBox="0 0 24 24"><use href="#{{ stage.icon }}"/></svg>
-                <span class="country-pipeline-num">{% if forloop.index < 10 %}0{{ forloop.index }}{% else %}{{ forloop.index }}{% endif %}</span>
-                <span class="country-pipeline-label">{{ stage.title }}</span>
-              </span>
-            </button>
-          {% else %}
-            <a class="country-pipeline-stage" href="{{ stage.url }}" {% if stage.newtab %}target="_blank" rel="noopener"{% endif %}
-               data-title="{{ stage.title | escape }}" data-subtitle="{{ stage.subtitle | escape }}">
-              <span class="country-pipeline-stage-inner">
-                <svg class="country-pipeline-icon" viewBox="0 0 24 24"><use href="#{{ stage.icon }}"/></svg>
-                <span class="country-pipeline-num">{% if forloop.index < 10 %}0{{ forloop.index }}{% else %}{{ forloop.index }}{% endif %}</span>
-                <span class="country-pipeline-label">{{ stage.title }}</span>
-              </span>
-            </a>
-          {% endif %}
+          <button class="country-pipeline-stage" type="button" data-stage="{{ stage_index }}"
+                  data-title="{{ stage.title | escape }}" data-subtitle="{{ stage.subtitle | escape }}">
+            <span class="country-pipeline-stage-inner">
+              <svg class="country-pipeline-icon" viewBox="0 0 24 24"><use href="#{{ stage.icon }}"/></svg>
+              <span class="country-pipeline-num">{% if forloop.index < 10 %}0{{ forloop.index }}{% else %}{{ forloop.index }}{% endif %}</span>
+              <span class="country-pipeline-label">{{ stage.title }}</span>
+            </span>
+          </button>
         {% endfor %}
       </div>
-
-      <div class="country-pipeline-detail placeholder" id="countryPipelineDetail">Hover a stage above to see what happens at that step, CLICK to explore it.</div>
 
       {% for stage in stages %}
         {% if stage.sub_items %}
@@ -106,7 +93,6 @@ and Validation) with { title, url, newtab }.
                         {% if item.url and item.url != "#" %}<a class="env-desc-item" href="{{ item.url }}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>{% else %}<div class="env-desc-item">{% endif %}
                           <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
                           <span class="env-desc-item-title">{{ item.title }}</span>
-                          <span class="env-desc-item-desc">{{ item.description }}</span>
                         {% if item.url and item.url != "#" %}</a>{% else %}</div>{% endif %}
                       {% endfor %}
                     </div>
@@ -117,7 +103,6 @@ and Validation) with { title, url, newtab }.
                       {% if item.url and item.url != "#" %}<a class="env-desc-item" href="{{ item.url }}" {% if item.newtab %}target="_blank" rel="noopener"{% endif %}>{% else %}<div class="env-desc-item">{% endif %}
                         <img src="{{ item.image | relative_url }}" alt="" class="env-desc-item-img">
                         <span class="env-desc-item-title">{{ item.title }}</span>
-                        <span class="env-desc-item-desc">{{ item.description }}</span>
                       {% if item.url and item.url != "#" %}</a>{% else %}</div>{% endif %}
                     {% endfor %}
                   </div>
@@ -125,16 +110,25 @@ and Validation) with { title, url, newtab }.
               </div>
             {% endfor %}
           </div>
+
+        {% else %}
+          <div class="country-pipeline-panel" data-panel="{{ forloop.index0 }}" hidden>
+            <p class="pipeline-panel-detail">{{ stage.subtitle }}</p>
+            {% if stage.url and stage.url != "#" %}
+              <a class="pipeline-panel-link" href="{{ stage.url }}" {% if stage.newtab %}target="_blank" rel="noopener"{% endif %}>Explore {{ stage.title }} &rarr;</a>
+            {% endif %}
+          </div>
         {% endif %}
       {% endfor %}
 
-      {% if page.pipeline_extra %}
-        <div class="country-pipeline-extra">
-          {% for badge in page.pipeline_extra %}
-            <a class="country-pipeline-badge" href="{{ badge.url }}" {% if badge.newtab %}target="_blank" rel="noopener"{% endif %}>{{ badge.title }}</a>
-          {% endfor %}
+      <div class="pipeline-footer-boxes">
+        <a class="pipeline-footer-box" href="{{ page.pipeline_validation_url | default: 'https://livingearthhub.org/tools/earthtrack-app' }}">
+          Calibration and Validation
+        </a>
+        <div class="pipeline-footer-box pipeline-footer-box-static">
+          Engagement and Outreach
         </div>
-      {% endif %}
+      </div>
 
     </div>
   </div>
@@ -155,15 +149,6 @@ and Validation) with { title, url, newtab }.
 (function () {
   var stages = document.querySelectorAll('.country-pipeline-stage[data-stage]');
   var panels = document.querySelectorAll('.country-pipeline-panel[data-panel]');
-  var detailBox = document.getElementById('countryPipelineDetail');
-  var allTriggers = document.querySelectorAll('.country-pipeline-stage');
-
-  allTriggers.forEach(function (btn) {
-    btn.addEventListener('mouseenter', function () {
-      detailBox.classList.remove('placeholder');
-      detailBox.innerHTML = '<span class="country-pipeline-dot"></span><strong>' + btn.dataset.title + ':</strong>&nbsp;' + btn.dataset.subtitle;
-    });
-  });
 
   stages.forEach(function (btn) {
     btn.addEventListener('click', function () {

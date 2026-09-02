@@ -8,7 +8,7 @@
   url: /tools/earthtrack-app-information
   image: /assets/img/earthTrackApp.png
 
-- title: Data
+- title: Living Earth Products
   subtitle: Download or stream data to your computer
-  url: /tools/get-the-data-information
+  url: /tools/for-developers/#download-data
   image: /assets/img/getdata.png

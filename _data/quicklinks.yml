@@ -1,15 +1,15 @@
 - title: Countries
-  url: /global/
-  icon: globe.png
+  url: /#countires/
+  icon: globe
 - title: About
   url: /about/
-  icon: info.png
+  icon: info
 - title: Tools
   url: /tools/
-  icon: tools.png
+  icon: tools
 - title: Themes
   url: /themes/aboutthemes/
-  icon: leaf.png
+  icon: leaf
 - title: News and Events
   url: /news/
-  icon: news.png
+  icon: news

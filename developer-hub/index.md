@@ -8,7 +8,7 @@ title: "Developer Hub Entry"
 subtitle: "For programmers and product developers"
 image: "/assets/img/hubs/developer-hub/developer_koala.png"
 background: "#252C0B"
-nocontact: true
+nocontact: false
 nobuttons: true
 Nosvg: false
 ---
